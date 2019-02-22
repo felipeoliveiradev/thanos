@@ -1,0 +1,52 @@
+.btn {
+  border-radius: 21px 21px 21px 0px;
+  -moz-border-radius: 21px 21px 21px 0px;
+  -webkit-border-radius: 21px 21px 21px 0px;
+  border: 0px solid #000000;
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+  background: $corprincipal;
+  padding-top: 0.4375rem;
+  padding-bottom: 0.4375rem;
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  margin-bottom: 4rem !important;
+}
+
+.outline {
+  border: 1px solid #fff;
+  background: transparent;
+}
+
+.btn_menu {
+  border-radius: 16px 16px 16px 0px;
+  -moz-border-radius: 16px 16px 16px 0px;
+  -webkit-border-radius: 16px 16px 16px 0px;
+  border: 0px solid #000000;
+  padding: 0.6rem 1rem 0.6rem 1rem;
+  color: #fff !important;
+  background: $corprincipal;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  height: 40px !important;
+  a {
+    color: #fff !important;
+  }
+}
+
+.btn_menu_2 {
+  border-radius: 16px 16px 16px 0px;
+  -moz-border-radius: 16px 16px 16px 0px;
+  -webkit-border-radius: 16px 16px 16px 0px;
+  border: 0px solid #000000;
+  padding: 0.6rem 1rem 0.6rem 1rem;
+  color: #fff !important;
+  background: $corsecundaria;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  height: 40px !important;
+  a {
+    color: #fff !important;
+  }
+}

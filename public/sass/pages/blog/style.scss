@@ -1,0 +1,151 @@
+.blogPage {
+  .homeTitle {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  .left {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    .banner {
+      width: 100%;
+      height: 400px;
+      background: #000;
+      margin-top: 0rem;
+      margin-left: 0%;
+      padding-left: 0;
+      display: flex;
+      .img {
+        position: relative;
+        background: url("../image/cases/case2.png");
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        .cliente {
+          width: 200px;
+          /* display: block; */
+          position: absolute;
+          height: 150px;
+          background: #bb3f28;
+          background-image: url("../image/cases/conac.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 150px;
+          margin: 0;
+          right: -105px;
+        }
+        h1 {
+          position: absolute;
+          margin-top: 7rem;
+          padding-left: 1rem;
+          color: #fff;
+          font-size: 2rem;
+          text-transform: uppercase;
+          font-family: "Montserrat Bold";
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: #000;
+          opacity: 0.5;
+          -webkit-animation: slide 0.5s linear alternate;
+        }
+      }
+    }
+  }
+  .right {
+    display: flex;
+    align-content: center;
+    padding: 0;
+    .target {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      .innerBlogTarget {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 200px;
+        background-color: $corprincipal;
+        border-radius: 0 20px 60px 0 !important;
+        flex-direction: column;
+        h1 {
+          width: 100%;
+          text-align: center;
+          margin-top: 3rem;
+          color: #fff;
+        }
+        select {
+          width: 50%;
+          padding: 1rem;
+          border-radius: 30px;
+          border: none;
+          &:focus {
+            box-shadow: none;
+            border: none;
+            outline: transparent;
+          }
+        }
+        .margin-left {
+          left: -100px;
+        }
+      }
+    }
+  }
+  .block {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    .innerblock {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      background: url("../image/cases/cases.png");
+      background-size: 100% !important;
+      background-position: center !important;
+      display: flex;
+      color: #fff;
+      align-items: flex-end;
+      h1 {
+        position: absolute;
+        margin-top: -2rem;
+        padding-left: 1rem;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+      .innerLogo {
+        width: 50px;
+        height: 60px;
+        background: $corprincipal;
+        position: absolute;
+        top: -1.5rem;
+        right: 0.2rem;
+        background-image: url("../image/cases/conac.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 40px;
+      }
+      &::before {
+        content: "";
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.5;
+      }
+    }
+  }
+}

@@ -1,0 +1,179 @@
+#modalOpenCart {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 99999;
+}
+
+#modalErroCart {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#modalInfoCart {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 99999;
+}
+
+.leftContainerModal {
+  display: flex;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 12px;
+  border: none;
+  width: 800px;
+  overflow: hidden;
+  -webkit-animation: bodyHtml 2s;
+  z-index: 99999;
+  /* Safari 4.0 - 8.0 */
+  animation: bodyHtml 3s;
+  transition: all $transitionTime;
+  p {
+    text-align: left;
+    font-size: 0.8rem;
+  }
+  .innertabsbottomtop {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    button {
+      border-radius: 21px 21px 21px 0px;
+      -moz-border-radius: 21px 21px 21px 0px;
+      -webkit-border-radius: 21px 21px 21px 0px;
+      border: 0px solid #000000;
+      text-decoration: none;
+      list-style: none;
+      color: #fff;
+      background: transparent;
+      border: 1px solid $corprincipal;
+      color: $corprincipal;
+      padding-top: 0.4375rem;
+      padding-bottom: 0.4375rem;
+      padding-left: 1.125rem;
+      padding-right: 1.125rem;
+      margin-bottom: 1rem !important;
+      margin-left: 10px;
+    }
+  }
+  .containertabs {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .Page {
+      height: 200px;
+      width: 100%;
+      overflow: auto;
+      background-color: transparent;
+      padding: 0em;
+    }
+    .wrapper {
+      height: auto;
+      width: 100%;
+      background-color: transparent;
+      overflow: hidden;
+    }
+    .Element {
+      width: 100%;
+      height: auto;
+      background-color: transparent;
+      font-size: 0.8rem;
+    }
+    /* customize scrollbar css */
+    #scrollbar-custom::-webkit-scrollbar {
+      width: 12px;
+      background-color: #ffffff;
+    }
+    #scrollbar-custom::-webkit-scrollbar:horizontal {
+      height: 12px;
+    }
+    #scrollbar-custom::-webkit-scrollbar-track {
+      border: 1px #ffffff solid;
+      border-radius: 100px;
+      -webkit-box-shadow: 0 0 6px #ffffff inset;
+    }
+    #scrollbar-custom::-webkit-scrollbar-thumb {
+      background-color: #b03c3f;
+      border: 1px solid #ffffff;
+      border-radius: 100px;
+    }
+    #scrollbar-custom::-webkit-scrollbar-thumb:hover {
+      background-color: #bf4649;
+      border: 1px solid #ffffff;
+    }
+    #scrollbar-custom::-webkit-scrollbar-thumb:active {
+      background-color: #a6393d;
+      border: 1px solid #ffffff;
+    }
+    .innertabscontent {
+      width: 100%;
+      height: 100%;
+      iframe {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .info {
+        content: "";
+        position: absolute;
+        width: 30%;
+        height: 100%;
+        background: $corprincipal;
+        top: 0;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        padding: 1rem;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  .active {
+    background: $corprincipal !important;
+    color: #fff !important;
+  }
+}
+
+.close {
+  color: $corprincipal;
+  float: right;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}

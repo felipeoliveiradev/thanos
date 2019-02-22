@@ -1,0 +1,59 @@
+.imageComponentImage {
+    height: 15rem;
+    margin: {
+        top: 2rem;
+        bottom: 4rem;
+    }
+    .inner {
+        width: 100%;
+        height: auto;
+        padding: 1rem 0rem 1rem 1rem;
+        position: relative;
+        top: 0;
+        transform: none;
+        .image {
+            background: url();
+            width: 20rem;
+            height: 15rem;
+            background: blue;
+            z-index: 2;
+            position: absolute; //transition: all $transitionTime ease-in-out;
+        }
+        &:before {
+            content: "";
+            width: 20rem;
+            height: 15rem;
+            border: 2px solid $corprincipal;
+            margin-top: -1rem;
+            position: absolute;
+            padding: 1rem 0 1rem 0;
+            left: 0;
+            top: 3rem;
+            z-index: 0; //transition: all $transitionTime ease-in-out;
+        }
+        &:after {
+            content: "";
+            width: 20rem;
+            height: 15rem;
+            border: 2px solid $corsecundaria;
+            margin-top: -1rem;
+            position: absolute;
+            padding: 1rem 0 1rem 0;
+            right: 0;
+            top: 1rem;
+            z-index: 2; //transition: all $transitionTime ease-in-out;
+        }
+        &:hover:before {
+            //margin-top: -2rem; //transition: all $transitionTime ease-in-out;
+        }
+        &:hover:after {
+            //margin-top: 1.5rem; //transition: all 1s ease-in-out;
+        }
+        &:hover {
+            .image {
+                //margin-left: 0rem;
+                //margin-top: 0.5rem; //transition: all $transitionTime ease-in-out;
+            }
+        }
+    }
+}

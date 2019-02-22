@@ -1,0 +1,279 @@
+.productPrincipal {
+  .image {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    picture {
+      padding: 2rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .textMoreArrow {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: {
+      top: 0;
+      left: 1rem;
+      right: 1rem;
+      bottom: 0;
+    }
+    .texts {
+      grid-column: span 11;
+      align-self: center;
+      justify-self: left;
+      .innerTexts {
+        grid-column: span 12;
+        h1 {
+          font-size: 1rem;
+          grid-column: span 12;
+          font-family: "Montserrat Regular";
+          text-transform: uppercase;
+          span {
+            font-size: 0.8rem;
+            font-weight: 300;
+            font-family: "Montserrat Regular";
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    .arrows {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          text-align: center;
+          width: 100%;
+          a {
+            text-decoration: none;
+            font-size: 0.5rem;
+            padding: {
+              left: 0.5rem;
+              right: 0.5rem;
+            }
+          }
+        }
+        .arrowsSelectUp {
+          background-color: $corprincipal;
+          border-radius: 5px 5px 0 0;
+          i {
+            color: #fff;
+          }
+        }
+        .arrowsSelectDown {
+          background-color: $corprincipal;
+          border-radius: 0 0 5px 5px;
+          i {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .button {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: {
+      top: 1rem;
+      bottom: 1rem;
+    }
+    padding: {
+      top: 0;
+      left: 1rem;
+      right: 1rem;
+      bottom: 0;
+    }
+    font-size: 0.8rem;
+    .btnAddCart {
+      grid-column: span 10;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      background: transparent;
+      padding: {
+        top: 0.5rem;
+        left: 1rem;
+        right: 1rem;
+        bottom: 0.5rem;
+      }
+      text-decoration: none;
+      border: {
+        top: 1px;
+        left: 1px;
+        bottom: 1px;
+        right: 0;
+      }
+      border-style: solid;
+      border-color: $corprincipal;
+      border-radius: 20px 0 0 0px;
+      color: $corsecundaria;
+      align-self: center;
+      i {
+        align-self: center;
+      }
+    }
+    .btnMoreInformation {
+      grid-column: span 2;
+      background: $corsecundaria;
+      border: 1px solid $corsecundaria;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0.5rem;
+      border-radius: 0px 20px 20px 0px;
+      align-self: center;
+      height: 100%;
+      i {
+        color: #fff;
+        align-self: center;
+      }
+    }
+  }
+}
+
+.productPrincipalCategory {
+  .image {
+    width: 100%;
+    height: auto;
+    padding: 0rem;
+    picture {
+      padding: 0rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .textMoreArrow {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: {
+      top: 0;
+      left: 1rem;
+      right: 1rem;
+      bottom: 0;
+    }
+    .texts {
+      grid-column: span 11;
+      align-self: center;
+      justify-self: left;
+      .innerTexts {
+        grid-column: span 12;
+        h1 {
+          font-size: 1rem;
+          grid-column: span 12;
+          font-family: "Montserrat Regular";
+          text-transform: uppercase;
+          span {
+            font-size: 0.8rem;
+            font-weight: 300;
+            font-family: "Montserrat Regular";
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    .arrows {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          text-align: center;
+          width: 100%;
+          a {
+            text-decoration: none;
+            font-size: 0.5rem;
+            padding: {
+              left: 0.5rem;
+              right: 0.5rem;
+            }
+          }
+        }
+        .arrowsSelectUp {
+          background-color: $corprincipal;
+          border-radius: 5px 5px 0 0;
+          i {
+            color: #fff;
+          }
+        }
+        .arrowsSelectDown {
+          background-color: $corprincipal;
+          border-radius: 0 0 5px 5px;
+          i {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .button {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: {
+      top: 1rem;
+      bottom: 1rem;
+    }
+    padding: {
+      top: 0;
+      left: 1rem;
+      right: 1rem;
+      bottom: 0;
+    }
+    font-size: 0.8rem;
+    .btnAddCart {
+      grid-column: span 10;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      background: transparent;
+      padding: {
+        top: 0.5rem;
+        left: 1rem;
+        right: 1rem;
+        bottom: 0.5rem;
+      }
+      text-decoration: none;
+      border: {
+        top: 1px;
+        left: 1px;
+        bottom: 1px;
+        right: 0;
+      }
+      border-style: solid;
+      border-color: $corprincipal;
+      border-radius: 20px 0 0 0px;
+      color: $corsecundaria;
+      align-self: center;
+      i {
+        align-self: center;
+      }
+    }
+    .btnMoreInformation {
+      grid-column: span 2;
+      background: $corsecundaria;
+      border: 1px solid $corsecundaria;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0.5rem;
+      border-radius: 0px 20px 20px 0px;
+      align-self: center;
+      height: 100%;
+      i {
+        color: #fff;
+        align-self: center;
+      }
+    }
+  }
+}

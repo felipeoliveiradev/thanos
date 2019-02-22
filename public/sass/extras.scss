@@ -1,0 +1,50 @@
+.t-center {
+  text-align: center;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.s {
+  padding: {
+    top: 0.8125rem !important;
+    right: 2.125rem !important;
+    bottom: 0.8125rem !important;
+    left: 2.25rem !important;
+  }
+}
+
+.m {
+  padding: {
+    top: 1.5rem !important;
+    right: 2rem !important;
+    bottom: 1.3rem !important;
+    left: 2rem !important;
+  }
+}
+
+.l {
+  padding: {
+    top: 2rem !important;
+    right: 2rem !important;
+    bottom: 3rem !important;
+    left: 3rem !important;
+  }
+}
+
+.center-h {
+  align-content: center;
+}
+
+.sticky-wrapper {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#wc_start {
+  width: 100%;
+}

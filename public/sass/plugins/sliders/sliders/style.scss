@@ -1,0 +1,90 @@
+.slide-single {
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  .h1container {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    h1 {
+      font-size: 3em;
+      color: #fff;
+      font-family: "Montserrat Bold" !important;
+      padding: {
+        top: 0;
+        bottom: 0;
+      }
+      margin: {
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+  .h3container {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    h3 {
+      font-size: 1.5em !important;
+      color: #fff !important;
+      font-family: "Montserrat Bold" !important;
+      padding: {
+        top: 0;
+        bottom: 0;
+      }
+      margin: {
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+  .acontainer {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    .btn-slide {
+      margin-top: 1rem;
+      margin-bottom: 0rem;
+    }
+  }
+}
+
+.bullets {
+  position: relative;
+  z-index: 8;
+  bottom: 0rem;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  transform: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+  span {
+    display: block;
+    float: left;
+    position: relative;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #000;
+    opacity: 0.5;
+    transition: 0.5s all;
+    margin-left: 5px;
+    &:hover {
+      background: $corprincipal;
+    }
+  }
+  .active-slider {
+    background: $corprincipal;
+  }
+}
