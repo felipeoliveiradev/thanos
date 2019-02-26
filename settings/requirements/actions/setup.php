@@ -8,8 +8,7 @@ add_action("customize_register", "fn_custumizer_register");
 
 //MENU
 
-//ACTIONS WOOCOMERCE REQUIRED
-add_action( 'after_setup_theme', 'woocommerce_support' );
+
 
 
 ?>

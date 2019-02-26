@@ -4,15 +4,11 @@
 // DONT REMOVE 
 //
 
-require_once get_template_directory() . "/settings/setup/setup.php";
+require_once get_template_directory() . "/settings/setup/Defination/setup.php";
 
-new Settings('requirements');
-new Settings('feeder');
-new Settings('pages');
-new Settings('components');
-new Settings('woocommerce');
-
-
-//SETTINGS
+// IMPORTA OS SETUPS
+new Setup('components');
+new Setup('requirements');
+new Setup('twig');
 
 ?>

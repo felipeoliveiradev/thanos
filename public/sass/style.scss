@@ -13,21 +13,12 @@
 @import "image/line/style.scss";
 @import "plugins/modal/style.scss";
 @import "plugins/sliders/sliders/style.scss";
+@import "plugins/cards/fixedCard/style.scss";
 // PAGES
-@import "pages/about/style.scss";
-@import "pages/services/style.scss";
-@import "pages/product/style.scss";
-@import "pages/cases/style.scss";
-@import "pages/blog/style.scss";
-@import "pages/single/style.scss";
-@import "pages/contact/style.scss";
-@import "pages/budget/style.scss";
-@import "pages/cart/style.scss";
-@import "pages/blog/single.scss";
-@import "pages/modelServices/style.scss";
+
 // BANNER
 @import "banner/principal/style.scss";
-@import "plugins/cards/fixedCard/style.scss";
+
 //PRINCIPAL
 @import "product/principal/style.scss";
 html,
@@ -44,12 +35,9 @@ body {
 
 .menuPrimary {
     width: 100%;
-    background: #fff;
+    //background: #fff;
     position: absolute;
     height: 80px;
-    -webkit-box-shadow: 0px 9px 34px -5px rgba(214, 214, 214, 1);
-    -moz-box-shadow: 0px 9px 34px -5px rgba(214, 214, 214, 1);
-    box-shadow: 0px 9px 34px -5px rgba(214, 214, 214, 1);
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
@@ -106,16 +94,21 @@ body {
                                 align-items: center;
                                 font-size: 0.8rem;
                                 text-decoration: none;
-                                color: #000;
+                                color: #fff;
                                 margin-right: 0.5rem;
                                 text-transform: uppercase;
                                 font-family: "Montserrat Medium";
                                 font-weight: 100;
+                                padding: 1rem;
+                                border: 2px solid transparent;
                                 &:hover {
-                                    color: $corprincipal;
+                                    color: #fff;
+                                    border: 2px solid $corprincipal;
+                                    border-radius: 3px;
+                                   
                                 }
                                 i {
-                                    color: #000;
+                                    color: #fff;
                                     font-size: 1.3rem;
                                 }
                             }
@@ -178,293 +171,14 @@ body {
     }
 }
 
-.prancheta_icon {
-    background-image: url(../image/icons/prancheta.svg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    padding: {
-        top: 10px;
-        right: 15px;
-        bottom: 10px;
-        left: 15px;
-    }
-    font-size: 0.6rem;
-    font-weight: bold;
-}
+
 
 .slideFeatured {
     position: relative;
     width: 100%;
-    height: 600px;
-    top: 0;
+    height: 100vh;
+        top: -80px;
     background-position: center;
-}
-
-.history {
-    width: 100%;
-    padding: $paddingPadrao;
-    .left {
-        .image {
-            background-image: url("../image/components/history/homeHistory.webp");
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 456px;
-        }
-    }
-    .right {
-        p {
-            font-family: "Montserrat Medium";
-            padding: {
-                top: 3.9375rem;
-                bottom: 1.1875rem;
-            }
-        }
-        a {
-            background: $corprincipal;
-            border-radius: 21px 21px 21px 0px;
-            -moz-border-radius: 21px 21px 21px 0px;
-            -webkit-border-radius: 21px 21px 21px 0px;
-            border: 0px solid #000000;
-            text-decoration: none;
-            list-style: none;
-            color: #fff;
-            padding: {
-                top: 0.4375rem;
-                bottom: 0.4375rem;
-                left: 1.125rem;
-                right: 1.125rem;
-            }
-        }
-    }
-}
-
-.homeTitle {
-    width: 100%;
-    text-align: center;
-    margin: {
-        top: 5rem;
-        bottom: 5rem;
-    }
-    small {
-        color: $corprincipal;
-        font-weight: bold;
-        font-size: 1.3rem;
-    }
-    h1 {
-        padding: 0;
-        margin: 0;
-        font-family: "Montserrat Bold";
-        font-size: 2.3333333333333335rem;
-    }
-    hr {
-        width: 5%;
-        margin: auto;
-        margin-top: 31px;
-        border-color: $corprincipal;
-    }
-}
-
-.sucessCase {
-    width: 100%;
-    height: 23.1875rem;
-    padding: 0;
-    background: url("../image/components/sucessCase/table.webp");
-    padding-top: 6.59375rem;
-    text-align: right;
-    position: relative;
-    h1 {
-        color: #fff;
-        font-family: "Montserrat Bold";
-        font-size: 2.5rem;
-    }
-    &:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: $corsecundaria;
-        opacity: 0.5;
-        left: 0;
-        top: 0;
-    }
-    &:hover:before {
-        background: $corprincipal;
-        transition: all $transitionTime;
-    }
-}
-
-.blogComponentHome {
-    .left {
-        .featured {
-            width: 100%;
-            background: #000;
-            height: 27.1875rem;
-            padding: 0;
-            margin-bottom: 1rem;
-            transition: all $transitionTime ease-in-out;
-            .date {
-                width: 100%;
-                position: absolute;
-                top: 0;
-                text-align: right;
-                h3 {
-                    color: #fff !important;
-                    text-decoration: none !important;
-                    padding: {
-                        right: 2rem;
-                    }
-                    a {
-                        color: #fff !important;
-                        text-decoration: none !important;
-                    }
-                }
-            }
-            .title {
-                h1 {
-                    color: #fff;
-                    position: absolute;
-                    bottom: 1rem;
-                    padding: {
-                        left: 1rem;
-                        right: 2rem;
-                    }
-                }
-            }
-            &:before {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                background: $corsecundaria;
-                opacity: 0.6;
-            }
-            &:hover:before {
-                background: $corprincipal;
-                transition: all $transitionTime ease-in-out;
-            }
-        }
-    }
-    .right {
-        .primary {
-            width: 100%;
-            background: $corprincipal; //height: 13.59375rem;
-            height: 13.0625rem;
-            margin-bottom: 1rem;
-            padding: 0;
-            .date {
-                width: 100%;
-                position: absolute;
-                top: 0;
-                text-align: right;
-                h4 {
-                    color: #fff !important;
-                    text-decoration: none !important;
-                    padding: {
-                        right: 2rem;
-                    }
-                    a{
-                      color: #fff !important;
-                      text-decoration: none !important;
-                    }
-                }
-            }
-            .title {
-                h1 {
-                    color: #fff !important;
-                    position: absolute;
-                    bottom: 1rem;
-                    font-size: 1rem;
-                    padding: {
-                        left: 1rem;
-                        right: 1rem;
-                    }
-                }
-            }
-            &:before {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                background: $corsecundaria;
-                opacity: 0.6;
-            }
-            &:hover:before {
-                background: $corprincipal;
-                transition: 1s;
-            }
-        }
-        .secound {
-            width: 100%;
-            background: chartreuse; //height: 13.59375rem;
-            height: 13.0625rem;
-            padding: 0;
-            .date {
-                width: 100%;
-                position: absolute;
-                top: 0;
-                text-align: right;
-                h4 {
-                    color: #fff !important;
-                    padding: {
-                        right: 2rem;
-                    }
-                }
-            }
-            .title {
-                h1 {
-                    color: #fff !important;
-                    position: absolute;
-                    bottom: 0.5rem;
-                    font-size: 1rem;
-                    padding: {
-                        left: 1rem;
-                        right: 1rem;
-                    }
-                }
-            }
-            &:before {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                background: $corsecundaria;
-                opacity: 0.6;
-            }
-            &:hover:before {
-                background: $corprincipal;
-                transition: all $transitionTime;
-            }
-        }
-    }
-}
-
-.ourStores {
-    margin-top: 5rem;
-    .container_interno {
-        h1 {
-            font-family: "Montserrat Bold";
-            color: $corprincipal !important;
-            font-size: 1.7rem;
-            width: 100%;
-            span {
-                margin-left: 0.5rem;
-                margin-right: 0.5rem;
-                position: relative;
-            }
-        }
-        h3 {
-            width: 100%;
-            margin-top: 3rem;
-            text-align: left;
-            position: relative;
-            color: $corterciaria;
-            font-size: 1rem;
-        }
-    }
 }
 
 footer {

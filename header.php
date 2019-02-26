@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html <?php language_attributes();?>>
+<?php
 
-<head>
-    <meta charset="<?php bloginfo('charset');?>" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+$GLOBALS['timberContext'] = Timber::get_context();
+ob_start();
 
-    <?php wp_head();?>
-</head>
 
-<body id="changepageajax" <?php body_class();?>>
-
-    <?php
-     new Components('menu', 'view');
-
-    ?>
+?>

@@ -6,7 +6,8 @@ Template Post Type: page
 
 get_header();
 
-new Components('slideFeatured');
+new title('teste', 'teste');
+
 
 
 get_footer();
