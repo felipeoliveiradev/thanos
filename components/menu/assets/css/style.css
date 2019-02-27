@@ -1,0 +1,12 @@
+.menuComponent {
+  width: 100%;
+  background: #000;
+}
+.menuComponent .logo {
+  float: left;
+}
+.menuComponent .menu {
+  float: left;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,10 +1,12 @@
 <?php 
- new BaseComponent('slide');
+$Base = new BaseComponent('Slide');
+
  function SlideComponent(){
-     $ModeloFrontend = new ComponentFrontend('slide');
-     $ModeloBackend =  new ComponentBackend('slide', 'SlideController');
+     $SlideFrontend = new ComponentFrontend('Slide');
+     $SlideBackend =  new ComponentBackend('Slide', 'SlideController');
     Timber::render( array(
-        $ModeloFrontend->url
-    ), $ModeloBackend->context);
+        $SlideFrontend->url
+    ), $SlideBackend->context);
 }
+
 ?>

@@ -2,4 +2,5 @@
 
 
 new importComponent ('commercialBar');
-new importComponent ('modelo');
+new importComponent ('slide');
+new importComponent ('menu');

@@ -3,5 +3,5 @@ AOS.init({
 });
 
 $(document).ready(function() {
-  $(".menuPrimary").sticky({ topSpacing: 0 });
+  $(".CommercialBarComponent").sticky({ topSpacing: 0 });
 });

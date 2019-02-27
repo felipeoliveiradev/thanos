@@ -1,3 +1,17 @@
-{% block ModeloComponent %}
-Esse é o modelo padrão de: {{teste}}
+{% block SlideComponent %}
+<div class="SlideComponent">
+    <ul>
+        <li><img src="{{ImagePublic()}}/banner.png"/></li>
+        <li><img src=""/></li>
+        <li><img src=""/></li>
+        <li><img src=""/></li>
+    </ul>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="barProgress"></div>
+        </div>
+    </div>
+    {{CommercialBarComponent()}}
+</div>
 {% endblock %}

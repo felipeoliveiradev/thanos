@@ -21,3 +21,6 @@ new SettingsSetup('setup/Defination/settings', 'RequirimentsSettings');
 new SettingsSetup('setup/Defination/settings', 'Settings');
 new SettingsSetup('setup/Defination/settings', 'Setup');
 new SettingsSetup('setup/Defination/settings', 'ExternalSetup');
+
+// IMPORTA AS CLASSES DO ASSETS
+new SettingsSetup('setup/Defination/assets', 'imagePublic');

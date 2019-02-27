@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Myriad Pro Regular';
+    src: url($pathfonte + '/hinted-MyriadPro-Regular.eot'); /* IE9 Compat Modes */
+    src: url($pathfonte + '/hinted-MyriadPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url($pathfonte + '/hinted-MyriadPro-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url($pathfonte + '/hinted-MyriadPro-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+         url($pathfonte + '/hinted-MyriadPro-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url($pathfonte + '/hinted-MyriadPro-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }

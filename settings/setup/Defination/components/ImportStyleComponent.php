@@ -7,7 +7,7 @@ add_filter( 'timber/twig', function( \Twig_Environment $twig ) {
 
 function ImportCssComponent($namepath, $file){
     echo '
-    <link href="'.get_template_directory_uri().'/components/'.$namepath.'/assets/css/'.$file.'.css" rel=/"stylesheet/" type="text/css"/>
+    <link href="'.get_template_directory_uri().'/components/'.$namepath.'/assets/css/'.$file.'.css" rel=/stylesheet" type="text/css"/>
     ';
 
 }

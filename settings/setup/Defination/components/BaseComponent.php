@@ -9,11 +9,7 @@
                 $twig->addFunction( new Timber\Twig_Function($name, $name) );
                 return $twig;
             } );
-        }
-        public function javascript(){
-
-        }
-        
+        }        
     }
 
 ?>
