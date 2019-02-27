@@ -1,9 +1,10 @@
 <?php
 class importComponent
 {
-    public function __construct($nameComponent, $type, $page)
+    public function __construct($nameComponent)
     {
-        include get_template_directory() . "/components/$nameComponent/$type/$page.php";
+        $NameComponentUcfirst = ucfirst($nameComponent);
+        include get_template_directory() . '/components/'."$nameComponent".'/'."$NameComponentUcfirst".'Component.php';
     }
 }
 ?>

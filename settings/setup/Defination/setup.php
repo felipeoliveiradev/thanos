@@ -11,9 +11,13 @@ new SettingsSetup('setup/Defination/components', 'Components');
 new SettingsSetup('setup/Defination/components', 'ClassComponent');
 new SettingsSetup('setup/Defination/components', 'ComponentTwig');
 new SettingsSetup('setup/Defination/components', 'ImportComponent');
+new SettingsSetup('setup/Defination/components', 'BaseComponent');
+new SettingsSetup('setup/Defination/components', 'ImportStyleComponent');
+new SettingsSetup('setup/Defination/components', 'ImportJavascriptComponent');
 
 //IMPORTA AS Class  DA SETTINGS
 
 new SettingsSetup('setup/Defination/settings', 'RequirimentsSettings');
 new SettingsSetup('setup/Defination/settings', 'Settings');
 new SettingsSetup('setup/Defination/settings', 'Setup');
+new SettingsSetup('setup/Defination/settings', 'ExternalSetup');

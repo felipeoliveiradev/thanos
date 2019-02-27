@@ -1,5 +1,7 @@
 <?php
 
+
+
 function fn_theme_styles()
 {
 
@@ -31,3 +33,4 @@ function fn_theme_styles()
     wp_enqueue_script("modal_js", get_template_directory_uri() . '/public/extra/plugin/modal/main.js', array('jquery'), true, true);
 
 }
+
