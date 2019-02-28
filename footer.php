@@ -54,11 +54,6 @@
 
 
 <?php wp_footer();?>
-<style>
-.woocommerce-notices-wrapper {
-    display: none !important;
-}
-</style>
 </body>
 
 </html>

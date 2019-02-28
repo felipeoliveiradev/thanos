@@ -13,9 +13,9 @@ function fn_theme_styles()
     // CSS PLUGINS
     wp_enqueue_style("icons_css", get_template_directory_uri() . '/public/extra/plugin/fontawesome/css/all.css');
     wp_enqueue_style("icons_mirage_css", get_template_directory_uri() . '/public/extra/plugin/mirageIcons/all.css');
-
     wp_enqueue_style("slick_css", get_template_directory_uri() . '/public/extra/plugin/slick/style.css');
     wp_enqueue_style("aosScroll_css", get_template_directory_uri() . '/public/extra/plugin/aosScroll/style.css');
+    wp_enqueue_style("owl_css", get_template_directory_uri() . '/public/extra/plugin/owl/owl.carousel.min.css');
 
 
     // CSS COMPONENTE
@@ -30,13 +30,17 @@ function fn_theme_styles()
     wp_enqueue_script("bundle_js", get_template_directory_uri() . '/public/js/bootstrap.bundle.min.js', array('jquery'), false, true);
     wp_enqueue_script("slider_js", get_template_directory_uri() . '/public/js/slider.js', array('jquery'), false, true);
     wp_enqueue_script("Scroll_js", get_template_directory_uri() . '/public/js/scroll.js', array('jquery'), false, true);
+    wp_enqueue_script("Owl_js", get_template_directory_uri() . '/public/js/owl.js', array('jquery'), false, true);
+
 
     //JAVASCRIPT PLUGIN
+    wp_enqueue_script("owl_js", get_template_directory_uri() . '/public/extra/plugin/owl/owl.carousel.min.js', array('jquery'), true, true);
     wp_enqueue_script("slick_js", get_template_directory_uri() . '/public/extra/plugin/slick/main.js', array('jquery'), false, true);
     wp_enqueue_script("jquery_js", get_template_directory_uri() . '/public/extra/plugin/jquery/jquery.min.js', true, false);
     wp_enqueue_script("jquery_sticky_js", get_template_directory_uri() . '/public/extra/plugin/jquery/sticky.min.js', array('jquery'), true, false);
     wp_enqueue_script("aosScroll_js", get_template_directory_uri() . '/public/extra/plugin/aosScroll/main.js', array('jquery'), true, false);
     wp_enqueue_script("modal_js", get_template_directory_uri() . '/public/extra/plugin/modal/main.js', array('jquery'), true, true);
+
 
 
 

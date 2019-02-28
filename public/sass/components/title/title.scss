@@ -1,0 +1,20 @@
+.TitleComponent{
+        font-family: 'Roboto Thin' !important;
+    h1{
+        font-family: 'Roboto Thin';
+        color:$colorprimary;
+        font-size: 40px;
+        margin-bottom: 0;
+        line-height:1;
+        span{
+            font-family: 'Roboto Light';
+            color:$colorquartenary;
+        }
+    }
+    hr{
+        width: 43px;
+        border:1px solid $colorprimary;
+        margin-left:0;
+        margin-top:18px;
+    }
+}

@@ -3,8 +3,9 @@
 class ComponentBackend
 {
     public $context = "";
-    public function __construct($nameComponent, $page = null)
+    public function __construct($nameComponent, $page = null, $array=null)
     {
+        
         if(empty($page)){
         include get_template_directory() . "/components/$nameComponent/backend/Controller.php";    
         $this->context = $context;

@@ -1,0 +1,100 @@
+.CardComponent{
+    width: 374px;
+    height: 391px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 0;
+    position: relative;
+    margin-bottom:15px;
+.CardMaster{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .imageContainer{
+        height: 100%;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+    .overlay{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        background: -moz-linear-gradient(top, rgba(0,0,0,0.07) 0%, rgba(0,0,0,0.07) 1%, rgba(0,0,0,0.46) 64%, rgba(0,0,0,0.74) 78%, rgba(0,0,0,1) 98%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(0,0,0,0.07) 0%,rgba(0,0,0,0.07) 1%,rgba(0,0,0,0.46) 64%,rgba(0,0,0,0.74) 78%,rgba(0,0,0,1) 98%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0,0,0,0.07) 0%,rgba(0,0,0,0.07) 1%,rgba(0,0,0,0.46) 64%,rgba(0,0,0,0.74) 78%,rgba(0,0,0,1) 98%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#12000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+        transition: all 1s;
+    }
+    .containerInner{
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        align-content: flex-end;
+        justify-content: center;
+        justify-items: center;
+        background-size: cover !important;
+        background-position: center !important;
+        height: 100%;
+        padding:0;
+        margin-top: -391px;
+
+        .text{
+            color:#fff;
+            text-align: center;
+            animation: animatedOutCardTranslateIn 2s; 
+            animation-fill-mode:forwards;
+            h1 {
+                line-height: 1;
+                margin: 0;
+                padding: 0;
+                font-size: 17px;
+                font-family: "Roboto Black";
+                margin-top:10px;
+                text-transform: uppercase;
+                
+                hr{
+                    padding: 0;
+                    margin: 0;
+                    margin-top:5px;
+                    border-color:$colorprimary;
+                    margin-bottom:8px;
+                }
+            }
+            h2 {
+                line-height: 1;
+                margin: 0;
+                padding: 0;
+                font-size: 15px;
+                font-family: "Roboto Thin";
+                text-transform: capitalize;
+            }
+            h3 {
+                line-height: 1;
+                margin: 0;
+                font-size: 13px;
+                padding: 0;
+                margin-bottom:21px;
+                font-family: "Roboto Regular";
+                text-transform: capitalize;
+            }
+        }
+    }
+    &:hover{
+        .text{
+            animation: animatedOutCardTranslateOut 2s; 
+            animation-fill-mode:forwards;
+        }
+        .overlay{
+            background: #000;
+        }
+    }
+}
+}
+.CardComponent:first-child, .CardComponent:nth-child(2) {
+    width: 49.5%;
+}
+

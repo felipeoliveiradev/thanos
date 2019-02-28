@@ -7,6 +7,11 @@
   margin: 0;
 }
 
+.flexbetween {
+  display: flex;
+  justify-content: space-between;
+}
+
 .menuComponent {
   width: 100%;
   position: absolute;
@@ -57,7 +62,7 @@
   text-transform: uppercase;
 }
 .menuComponent .menu ul li a:hover {
-  border: 1px solid #cc2329;
+  border: 1px solid #ab2b31;
 }
 
 .SlideComponent {
@@ -69,21 +74,47 @@
   z-index: 0;
   top: 0;
 }
-.SlideComponent ul {
-  padding: 0;
-  margin: 0;
+.SlideComponent .myslider {
   height: 100%;
-}
-.SlideComponent ul li {
-  height: 100%;
-}
-.SlideComponent ul li img {
-  position: relative;
-  display: block;
-  margin: 0;
-  padding: 0;
   width: 100%;
+  margin: 0px auto;
+  position: relative;
+  z-index: 0;
+}
+.SlideComponent .myslider .item {
+  height: 100vh;
+  width: 100%;
+  background: #eeeeee;
   height: 100%;
+}
+.SlideComponent .myslider .owl-stage {
+  height: 100%;
+}
+.SlideComponent .myslider .owl-stage-outer {
+  height: 100%;
+}
+.SlideComponent .myslider .item img {
+  height: 100vh;
+  width: 100%;
+}
+.SlideComponent .owl-dots .owl-dot {
+  margin: 0px 0px;
+  z-index: 9;
+}
+.SlideComponent .owl-dots .owl-dot button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #555555;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.SlideComponent .owl-dots .owl-dot button:focus {
+  outline: none;
+}
+.SlideComponent .owl-dots .owl-dot.active button {
+  color: #000000;
 }
 .SlideComponent .overlay {
   width: 100%;
@@ -206,12 +237,198 @@
   text-transform: uppercase;
 }
 
+.TitleComponent {
+  font-family: "Roboto Thin" !important;
+}
+.TitleComponent h1 {
+  font-family: "Roboto Thin";
+  color: #ab2b31;
+  font-size: 40px;
+  margin-bottom: 0;
+  line-height: 1;
+}
+.TitleComponent h1 span {
+  font-family: "Roboto Light";
+  color: #575757;
+}
+.TitleComponent hr {
+  width: 43px;
+  border: 1px solid #ab2b31;
+  margin-left: 0;
+  margin-top: 18px;
+}
+
+.CardComponent {
+  width: 374px;
+  height: 391px;
+  background-size: cover;
+  background-position: center;
+  margin-right: 0;
+  position: relative;
+  margin-bottom: 15px;
+}
+.CardComponent .CardMaster {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.CardComponent .CardMaster .imageContainer {
+  height: 100%;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.CardComponent .CardMaster .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.07) 0%, rgba(0, 0, 0, 0.07) 1%, rgba(0, 0, 0, 0.46) 64%, rgba(0, 0, 0, 0.74) 78%, black 98%, black 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.07) 0%, rgba(0, 0, 0, 0.07) 1%, rgba(0, 0, 0, 0.46) 64%, rgba(0, 0, 0, 0.74) 78%, black 98%, black 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 0%, rgba(0, 0, 0, 0.07) 1%, rgba(0, 0, 0, 0.46) 64%, rgba(0, 0, 0, 0.74) 78%, black 98%, black 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#12000000", endColorstr="#000000",GradientType=0 );
+  /* IE6-9 */
+  transition: all 1s;
+}
+.CardComponent .CardMaster .containerInner {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  align-content: flex-end;
+  justify-content: center;
+  justify-items: center;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 100%;
+  padding: 0;
+  margin-top: -391px;
+}
+.CardComponent .CardMaster .containerInner .text {
+  color: #fff;
+  text-align: center;
+  animation: animatedOutCardTranslateIn 2s;
+  animation-fill-mode: forwards;
+}
+.CardComponent .CardMaster .containerInner .text h1 {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  font-family: "Roboto Black";
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+.CardComponent .CardMaster .containerInner .text h1 hr {
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
+  border-color: #ab2b31;
+  margin-bottom: 8px;
+}
+.CardComponent .CardMaster .containerInner .text h2 {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: "Roboto Thin";
+  text-transform: capitalize;
+}
+.CardComponent .CardMaster .containerInner .text h3 {
+  line-height: 1;
+  margin: 0;
+  font-size: 13px;
+  padding: 0;
+  margin-bottom: 21px;
+  font-family: "Roboto Regular";
+  text-transform: capitalize;
+}
+.CardComponent .CardMaster:hover .text {
+  animation: animatedOutCardTranslateOut 2s;
+  animation-fill-mode: forwards;
+}
+.CardComponent .CardMaster:hover .overlay {
+  background: #000;
+}
+
+.CardComponent:first-child, .CardComponent:nth-child(2) {
+  width: 49.5%;
+}
+
 @font-face {
   font-family: "Myriad Pro Regular";
-  src: url("../fonts/hinted-MyriadPro-Regular.eot");
+  src: url("../fonts/Myriad/hinted-MyriadPro-Regular.eot");
   /* IE9 Compat Modes */
-  src: url("../fonts/hinted-MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/hinted-MyriadPro-Regular.woff2") format("woff2"), url("../fonts/hinted-MyriadPro-Regular.woff") format("woff"), url("../fonts/hinted-MyriadPro-Regular.ttf") format("truetype"), url("../fonts/hinted-MyriadPro-Regular.svg#svgFontName") format("svg");
+  src: url("../fonts/Myriad/hinted-MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Myriad/hinted-MyriadPro-Regular.woff2") format("woff2"), url("../fonts/Myriad/hinted-MyriadPro-Regular.woff") format("woff"), url("../fonts/Myriad/hinted-MyriadPro-Regular.ttf") format("truetype"), url("../fonts/Myriad/hinted-MyriadPro-Regular.svg#svgFontName") format("svg");
   /* Legacy iOS */
+}
+@font-face {
+  font-family: "Roboto Black";
+  src: url("../fonts/Roboto/hinted-Roboto-Black.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Roboto/hinted-Roboto-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/hinted-Roboto-Black.woff2") format("woff2"), url("../fonts/Roboto/hinted-Roboto-Black.woff") format("woff"), url("../fonts/Roboto/hinted-Roboto-Black.ttf") format("truetype"), url("../fonts/Roboto/hinted-Roboto-Black.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/Roboto/hinted-Roboto-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Roboto/hinted-Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/hinted-Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto/hinted-Roboto-Regular.woff") format("woff"), url("../fonts/Roboto/hinted-Roboto-Regular.ttf") format("truetype"), url("../fonts/Roboto/hinted-Roboto-Regular.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("../fonts/Roboto/hinted-Roboto-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Roboto/hinted-Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/hinted-Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto/hinted-Roboto-Light.woff") format("woff"), url("../fonts/Roboto/hinted-Roboto-Light.ttf") format("truetype"), url("../fonts/Roboto/hinted-Roboto-Light.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: "Roboto Thin";
+  src: url("../fonts/Roboto/hinted-Roboto-Thin.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Roboto/hinted-Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/hinted-Roboto-Thin.woff2") format("woff2"), url("../fonts/Roboto/hinted-Roboto-Thin.woff") format("woff"), url("../fonts/Roboto/hinted-Roboto-Thin.ttf") format("truetype"), url("../fonts/Roboto/hinted-Roboto-Thin.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+}
+@keyframes animatedOutCardTranslateIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes animatedOutCardTranslateOut {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+@keyframes animatedOutCardOverlayOut {
+  0% {
+    background: #000000;
+    opacity: 0;
+  }
+  100% {
+    background: #000000;
+    opacity: 1;
+  }
 }
 body, html {
   margin: 0 auto;

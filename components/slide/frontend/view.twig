@@ -1,17 +1,29 @@
 {% block SlideComponent %}
 <div class="SlideComponent">
-    <ul>
-        <li><img src="{{ImagePublic()}}/banner.png"/></li>
-        <li><img src=""/></li>
-        <li><img src=""/></li>
-        <li><img src=""/></li>
-    </ul>
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="barProgress"></div>
+        <div class="myslider owl-carousel owl-theme">
+                <div class="item" data-dot="<button>01</button>">
+                  <img src="https://placeimg.com/720/350/nature">
+                </div>
+                <div class="item" data-dot="<button>02</button>">
+                  <img src="https://placeimg.com/720/350/animal">
+                </div>
+                <div class="item" data-dot="<button>03</button>">
+                  <img src="https://placeimg.com/720/350/tech">
+                </div>
+              </div>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="barProgress">
+                        
+                        <p></p>
+                </div>
+            </div>
         </div>
-    </div>
-    {{CommercialBarComponent()}}
+        {{CommercialBarComponent()}}
+
+
+
 </div>
+
 {% endblock %}
