@@ -12,12 +12,128 @@
   justify-content: space-between;
 }
 
+.reset-0 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.btnPrincipal {
+  width: 222px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  background: #ab2b31;
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  color: #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+@keyframes animatedOutCardTranslateIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes animatedOutCardTranslateOut {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+@keyframes animatedOutCardOverlayOut {
+  0% {
+    background: #000000;
+    opacity: 0;
+  }
+  100% {
+    background: #000000;
+    opacity: 1;
+  }
+}
+@keyframes animatedOutCardTranslateInLogo {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes animatedOutCardTranslateOutLogo {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+@keyframes animatedOutCardTranslateInTextOffset {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes animatedOutCardTranslateOutTextOffset {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(200px);
+    opacity: 1;
+  }
+}
 .menuComponent {
   width: 100%;
-  position: absolute;
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: -5rem;
   display: flex;
   z-index: 9;
-  margin-top: 1.375rem;
+  margin-top: 1.7rem;
 }
 .menuComponent .logo {
   float: left;
@@ -27,6 +143,25 @@
 }
 .menuComponent .logo img {
   width: 100%;
+}
+.menuComponent #menuOpen {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: none;
+  border: none;
+  color: #fff;
+  display: none;
+  font-size: 2rem;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  z-index: 10;
+}
+@media (max-width: 1024px) {
+  .menuComponent #menuOpen {
+    display: block;
+  }
 }
 .menuComponent .menu {
   width: calc(100% - 100px);
@@ -63,6 +198,74 @@
 }
 .menuComponent .menu ul li a:hover {
   border: 1px solid #ab2b31;
+}
+@media (max-width: 1024px) {
+  .menuComponent .menu {
+    display: none;
+  }
+}
+.menuComponent .menu-mobile .overlay {
+  position: fixed;
+  background: #000;
+  opacity: 0;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  -webkit-transition: all 2s linear;
+  -moz-transition: all 2s linear;
+  transition: all 2s linear;
+}
+.menuComponent .menu-mobile ul {
+  padding: 0;
+  position: fixed;
+  margin: 0;
+  display: block;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  list-style: none;
+  height: 100%;
+  z-index: 9;
+  right: 0;
+  height: 100%;
+  background: #000;
+  top: 0;
+  width: 300px;
+  transform: translateX(300px);
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+.menuComponent .menu-mobile ul li {
+  display: block;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  text-align: end;
+}
+.menuComponent .menu-mobile ul li a {
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid transparent;
+  font-family: "Myriad Pro Regular" !important;
+  border-radius: 0.1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  display: block;
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+  padding: 1rem;
+  transition: all 0.1s ease-in-out;
+}
+.menuComponent .menu-mobile ul li a:hover {
+  border: 1px solid #ab2b31;
+  transition: all 0.1s ease-in-out;
 }
 
 .SlideComponent {
@@ -147,6 +350,11 @@
   z-index: 9;
   margin-top: -70px;
 }
+@media (max-width: 900px) {
+  .SlideComponent {
+    height: auto;
+  }
+}
 
 .CommercialBarComponent {
   width: 100%;
@@ -156,7 +364,12 @@
   align-items: center;
   align-content: center;
 }
-.CommercialBarComponent .bar1 {
+.CommercialBarComponent .container .row {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.CommercialBarComponent .container .row .bar1 {
   width: 100%;
   background: #be5a5f;
   height: 100%;
@@ -167,16 +380,21 @@
   justify-items: center;
   color: #fff;
 }
-.CommercialBarComponent .bar1 i {
+.CommercialBarComponent .container .row .bar1 i {
   font-size: 2rem;
 }
-.CommercialBarComponent .bar1 label {
+.CommercialBarComponent .container .row .bar1 label {
   font-size: 1rem;
   font-weight: bold;
   padding-left: 5px;
   text-transform: uppercase;
 }
-.CommercialBarComponent .bar2 {
+@media (max-width: 900px) {
+  .CommercialBarComponent .container .row .bar1 {
+    padding: 1rem;
+  }
+}
+.CommercialBarComponent .container .row .bar2 {
   width: 100%;
   background: #b95358;
   height: 100%;
@@ -187,16 +405,21 @@
   justify-items: center;
   color: #fff;
 }
-.CommercialBarComponent .bar2 i {
+.CommercialBarComponent .container .row .bar2 i {
   font-size: 2rem;
 }
-.CommercialBarComponent .bar2 label {
+.CommercialBarComponent .container .row .bar2 label {
   font-size: 1rem;
   font-weight: bold;
   padding-left: 5px;
   text-transform: uppercase;
 }
-.CommercialBarComponent .bar3 {
+@media (max-width: 900px) {
+  .CommercialBarComponent .container .row .bar2 {
+    padding: 1rem;
+  }
+}
+.CommercialBarComponent .container .row .bar3 {
   width: 100%;
   background: #b44b50;
   height: 100%;
@@ -207,16 +430,21 @@
   justify-items: center;
   color: #fff;
 }
-.CommercialBarComponent .bar3 i {
+.CommercialBarComponent .container .row .bar3 i {
   font-size: 2rem;
 }
-.CommercialBarComponent .bar3 label {
+.CommercialBarComponent .container .row .bar3 label {
   font-size: 1rem;
   font-weight: bold;
   padding-left: 5px;
   text-transform: uppercase;
 }
-.CommercialBarComponent .bar4 {
+@media (max-width: 900px) {
+  .CommercialBarComponent .container .row .bar3 {
+    padding: 1rem;
+  }
+}
+.CommercialBarComponent .container .row .bar4 {
   width: 100%;
   background: #af454a;
   height: 100%;
@@ -227,14 +455,43 @@
   justify-items: center;
   color: #fff;
 }
-.CommercialBarComponent .bar4 i {
+.CommercialBarComponent .container .row .bar4 i {
   font-size: 2rem;
 }
-.CommercialBarComponent .bar4 label {
+.CommercialBarComponent .container .row .bar4 label {
   font-size: 1rem;
   font-weight: bold;
   padding-left: 5px;
   text-transform: uppercase;
+}
+@media (max-width: 900px) {
+  .CommercialBarComponent .container .row .bar4 {
+    padding: 1rem;
+  }
+}
+@media (max-width: 900px) {
+  .CommercialBarComponent .container .row {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: block;
+    max-width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .CommercialBarComponent .container {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .CommercialBarComponent {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .TitleComponent {
@@ -347,16 +604,346 @@
   font-family: "Roboto Regular";
   text-transform: capitalize;
 }
+.CardComponent .CardMaster .containerInner .logoOffset {
+  position: absolute;
+  width: 200px;
+  opacity: 0;
+  top: -114px;
+  display: none;
+  animation: animatedOutCardTranslateOutLogo 2s;
+}
+.CardComponent .CardMaster .containerInner .logoOffset img {
+  width: 100%;
+}
+.CardComponent .CardMaster .containerInner .textOffset {
+  position: absolute;
+  width: 90%;
+  opacity: 0;
+  bottom: -114px;
+  display: none;
+  animation: animatedOutCardTranslateOutTextOffset 1.5s;
+  text-align: center;
+  color: #fff;
+}
+.CardComponent .CardMaster .containerInner .textOffset .atencionCard {
+  width: 50%;
+  border: 1px solid #fff;
+  display: block;
+  margin: auto;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.CardComponent .CardMaster .containerInner .textOffset h1 {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  font-family: "Roboto Black";
+  margin-top: 10px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.CardComponent .CardMaster .containerInner .textOffset h1 hr {
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
+  border-color: #ab2b31;
+  margin-bottom: 8px;
+}
+.CardComponent .CardMaster .containerInner .textOffset h2 {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: "Roboto Thin";
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.CardComponent .CardMaster .containerInner .textOffset h3 {
+  line-height: 1;
+  margin: 0;
+  font-size: 13px;
+  padding: 0;
+  margin-bottom: 21px;
+  font-family: "Roboto Regular";
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.CardComponent .CardMaster .containerInner .textOffset .btn {
+  width: 200px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background: #ab2b31;
+  text-decoration: none;
+  display: block;
+  margin: auto;
+  color: #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
 .CardComponent .CardMaster:hover .text {
   animation: animatedOutCardTranslateOut 2s;
   animation-fill-mode: forwards;
+}
+.CardComponent .CardMaster:hover .logoOffset {
+  display: block;
+  top: 30px;
+  opacity: 1;
+  animation: animatedOutCardTranslateInLogo 2s;
+}
+.CardComponent .CardMaster:hover .textOffset {
+  display: block;
+  bottom: 30px;
+  opacity: 1;
+  animation: animatedOutCardTranslateInTextOffset 1.5s;
 }
 .CardComponent .CardMaster:hover .overlay {
   background: #000;
 }
 
-.CardComponent:first-child, .CardComponent:nth-child(2) {
+.CardComponent:first-child,
+.CardComponent:nth-child(2) {
   width: 49.5%;
+}
+
+@media (max-width: 1024px) {
+  .CardComponent {
+    width: 32.5%;
+  }
+}
+@media (max-width: 900px) {
+  .CardComponent:first-child {
+    width: 100%;
+  }
+
+  .CardComponent:nth-child(2),
+.CardComponent:nth-child(3) {
+    width: 49%;
+  }
+
+  .CardComponent {
+    width: 49%;
+  }
+}
+@media (max-width: 600px) {
+  .CardComponent:first-child {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+
+  .CardComponent:nth-child(2),
+.CardComponent:nth-child(3) {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+
+  .CardComponent {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+}
+.CardBlogHomeComponent {
+  width: 32%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  margin-right: 0;
+  position: relative;
+  margin-bottom: 15px;
+  margin-top: 41px;
+}
+.CardBlogHomeComponent .CardMaster {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background: #f2f2f2;
+  border-bottom: 3px solid #5f5d5e;
+}
+.CardBlogHomeComponent .CardMaster .imageContainer {
+  height: 300px;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.CardBlogHomeComponent .CardMaster .text .brands {
+  padding-top: 25px;
+  padding-left: 33px;
+  padding-right: 33px;
+  margin-top: -34px;
+}
+.CardBlogHomeComponent .CardMaster .text .brands .date {
+  padding-top: 7px;
+  padding-left: 20px;
+  padding-right: 14px;
+  padding-bottom: 8px;
+  border-radius: 5px 0 0 5px;
+  color: #fff;
+  background: #ab2b31 !important;
+}
+.CardBlogHomeComponent .CardMaster .text .brands .category {
+  padding-top: 7px;
+  padding-left: 20px;
+  padding-right: 14px;
+  padding-bottom: 8px;
+  border-radius: 0px 5px 5px 0;
+  color: #fff;
+  background: #c75e63 !important;
+}
+.CardBlogHomeComponent .CardMaster .text h1 {
+  font-size: 18px;
+  padding-top: 25px;
+  padding-left: 33px;
+  padding-right: 33px;
+}
+.CardBlogHomeComponent .CardMaster .text p {
+  padding-left: 33px;
+  padding-right: 33px;
+  padding-bottom: 22px;
+}
+@media (max-width: 900px) {
+  .CardBlogHomeComponent {
+    width: 100%;
+  }
+}
+
+.AboutComponent {
+  height: 511px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  background-position: right !important;
+  background-repeat: no-repeat !important;
+  background-blend-mode: color-burn;
+}
+.AboutComponent .left {
+  width: 531px;
+  float: left;
+  padding-right: 101px;
+  font-size: 16px;
+  margin-right: 0;
+  margin-left: 0;
+}
+.AboutComponent .left hr {
+  border: 0;
+}
+.AboutComponent .left a {
+  margin-left: 0;
+  display: table;
+  width: auto;
+  padding-top: 11px;
+  padding-left: 30px;
+  padding-bottom: 11px;
+  padding-right: 30px;
+  height: 36px;
+  font-size: 16px;
+}
+.AboutComponent .right {
+  height: 100%;
+  width: calc(100% - 531px - 21rem);
+  float: right;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.BlogHomeComponent {
+  padding-top: 116px;
+  padding-bottom: 46px;
+}
+.BlogHomeComponent .categorys {
+  display: flex;
+  justify-content: flex-end;
+  justify-items: flex-end;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: -94.8px;
+}
+.BlogHomeComponent .categorys ul {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  list-style: none;
+  justify-content: flex-end;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+  margin-left: -1px;
+}
+.BlogHomeComponent .categorys ul li {
+  padding-top: 10px;
+  padding-left: 18px;
+  padding-right: 17px;
+  padding-bottom: 11px;
+  margin-bottom: 0.4rem;
+}
+.BlogHomeComponent .categorys ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.BlogHomeComponent .categorys ul li:nth-child(1) {
+  background-color: #8e8e8e;
+}
+.BlogHomeComponent .categorys ul li:nth-child(2) {
+  background-color: #6f6f6f;
+}
+.BlogHomeComponent .categorys ul li:nth-child(3) {
+  background-color: #545454;
+}
+.BlogHomeComponent .categorys ul li:nth-child(4) {
+  background-color: #454545;
+}
+.BlogHomeComponent .categorys ul li:nth-child(5) {
+  background-color: #010101;
+}
+@media (max-width: 900px) {
+  .BlogHomeComponent .categorys ul {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    list-style: none;
+    justify-content: flex-start;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 526px) {
+  .BlogHomeComponent .categorys ul {
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+}
+@media (max-width: 900px) {
+  .BlogHomeComponent .categorys {
+    margin-top: 0;
+  }
+}
+@media (max-width: 600px) {
+  .BlogHomeComponent {
+    padding: 1rem;
+  }
+}
+
+.BarFooterComponent {
+  padding-top: 22px;
+  padding-bottom: 17px;
+  background: #282828;
+}
+.BarFooterComponent ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+}
+.BarFooterComponent ul li a {
+  color: #fff;
+  font-size: 33px;
 }
 
 @font-face {
@@ -394,43 +981,123 @@
   src: url("../fonts/Roboto/hinted-Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/hinted-Roboto-Thin.woff2") format("woff2"), url("../fonts/Roboto/hinted-Roboto-Thin.woff") format("woff"), url("../fonts/Roboto/hinted-Roboto-Thin.ttf") format("truetype"), url("../fonts/Roboto/hinted-Roboto-Thin.svg#svgFontName") format("svg");
   /* Legacy iOS */
 }
-@keyframes animatedOutCardTranslateIn {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
+footer {
+  width: 100%;
+  padding-top: 57px;
+  padding-bottom: 38px;
+  background: #333333;
+}
+footer .top {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  padding-bottom: 57px;
+}
+footer .top .img {
+  padding-right: 71px;
+}
+footer .top .img img {
+  width: 147px;
+  height: 70px;
+}
+@media (max-width: 768px) {
+  footer .top .img {
+    padding-right: 1.5rem;
   }
 }
-@keyframes animatedOutCardTranslateOut {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(50px);
-    opacity: 0;
+@media (max-width: 526px) {
+  footer .top .img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
   }
 }
-@keyframes animatedOutCardOverlayOut {
-  0% {
-    background: #000000;
-    opacity: 0;
-  }
-  100% {
-    background: #000000;
-    opacity: 1;
+footer .top .text {
+  padding-left: 54px;
+  border-left: 1px solid #606060;
+}
+footer .top .text p {
+  font-size: 16px;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  footer .top .text {
+    padding-left: 1.5rem;
   }
 }
-body, html {
+@media (max-width: 526px) {
+  footer .top .text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    border-left: none;
+  }
+}
+@media (max-width: 900px) {
+  footer .top {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  footer .top {
+    width: 100%;
+  }
+}
+footer .middle {
+  border-top: 1px solid #606060;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+}
+footer .middle .items h1 {
+  padding: 0;
+  color: #fff;
+  font-size: 23px;
+}
+footer .middle .items ul {
+  padding: 0;
+  list-style: none;
+}
+footer .middle .items ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #a6a6a6;
+  text-transform: uppercase;
+  font-family: "Roboto Regular";
+}
+@media (max-width: 900px) {
+  footer .middle .items {
+    width: 30%;
+  }
+}
+@media (max-width: 600px) {
+  footer .middle .items {
+    width: 40%;
+    padding: 1rem;
+  }
+}
+@media (max-width: 526px) {
+  footer .middle .items {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+footer .bottom {
+  display: flex;
+  justify-content: flex-end;
+  justify-items: flex-end;
+}
+footer .bottom img {
+  margin-top: 35px;
+  margin-bottom: 38px;
+  width: auto;
+  height: 28px;
+}
+
+body,
+html {
   margin: 0 auto;
   font-family: "Myriad Pro Regular" !important;
   padding: 0;

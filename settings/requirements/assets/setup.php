@@ -35,6 +35,7 @@ function fn_theme_styles()
 
     //JAVASCRIPT PLUGIN
     wp_enqueue_script("owl_js", get_template_directory_uri() . '/public/extra/plugin/owl/owl.carousel.min.js', array('jquery'), true, true);
+    wp_enqueue_script("stick_kit_js", get_template_directory_uri() . '/public/extra/plugin/Stick-Kit/stick.js', array('jquery'), true, true);
     wp_enqueue_script("slick_js", get_template_directory_uri() . '/public/extra/plugin/slick/main.js', array('jquery'), false, true);
     wp_enqueue_script("jquery_js", get_template_directory_uri() . '/public/extra/plugin/jquery/jquery.min.js', true, false);
     wp_enqueue_script("jquery_sticky_js", get_template_directory_uri() . '/public/extra/plugin/jquery/sticky.min.js', array('jquery'), true, false);

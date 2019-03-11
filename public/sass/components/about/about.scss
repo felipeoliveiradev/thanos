@@ -1,0 +1,42 @@
+.AboutComponent {
+  height: 511px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  background-position: right !important;
+  background-repeat: no-repeat !important;
+  background-blend-mode: color-burn;
+  .left {
+    hr {
+      border: 0;
+    }
+    width: 531px;
+    float: left;
+    //margin-left: 21rem;
+    padding-right: 101px;
+    font-size: 16px;
+    margin-right: 0;
+    margin-left: 0;
+    a {
+      margin-left: 0;
+      display: table;
+      width: auto;
+      padding: {
+        top: 11px;
+        left: 30px;
+        bottom: 11px;
+        right: 30px;
+      }
+      height: 36px;
+      font-size: 16px;
+    }
+  }
+  .right {
+    height: 100%;
+    width: calc(100% - 531px - 21rem);
+    float: right;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+}

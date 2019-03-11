@@ -1,9 +1,11 @@
 {% block MenuComponent %}
 
-<div class="menuComponent">
+<div class="menuComponent" id="menuComponent" style="position: sticky;">
+
     <div class="container">
         <div class="row">
             <div class="logo"><img src="{{ImagePublic()}}/logo.png"/></div>
+            <button class="menuOpen" id="menuOpen"><i class="fas fa-bars"></i></button>
                 <div class="menu">
                     <ul>
                         <li><a href="">Home</a></li>
@@ -15,8 +17,47 @@
                         <li><a href="">Contato</a></li>
                     </ul>
                 </div>
+            <div class="menu-mobile" id="menu-mobile">
+
+                    <ul id="menuLateral">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Conheça a Tpa</a></li>
+                        <li><a href="">Imóveis a venda</a></li>
+                        <li><a href="">Obras Entregues</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Area do cliente</a></li>
+                        <li><a href="">Contato</a></li>
+                    </ul>
+                    <div class="overlay" id="overlayMenu"></div>
+                </div>
             </div> 
         </div>
     </div>
 </div>
 {% endblock %}
+
+<script>
+var menuOpen = $("#menuOpen");
+var menuMobile = $("#menu-mobile");
+var overlayMenu = $("#overlayMenu");
+var menuLateral = $("#menuLateral");
+
+menuOpen.click(function() {
+  menuMobile.css("display", "block");
+  menuLateral.css("transform", "translateX(0)");
+  overlayMenu.css("opacity", "0.5");
+  overlayMenu.css("display", "block");
+  menuOpen.css("margin-right", "300px");
+  menuOpen.attr("onClick", "closeMenu()")
+  menuOpen.html("<i class='far fa-times-circle'></i>");
+});
+function closeMenu(){
+  menuMobile.css("display", "block");
+  menuLateral.css("transform", "translateX(300px)");
+  overlayMenu.css("opacity", "0");
+  overlayMenu.css("display", "none");
+  menuOpen.css("margin-right", "0");
+  menuOpen.html("<i class='fas fa-bars'></i>");
+  
+}
+</script>

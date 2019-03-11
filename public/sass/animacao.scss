@@ -1,16 +1,92 @@
 @keyframes animatedOutCardTranslateIn {
-    0% {transform: translateY(-50px); opacity: 0}
-    50% {opacity: 0;}
-    100% {transform: translateY(0px); opacity: 1; }
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 @keyframes animatedOutCardTranslateOut {
-    0% {transform: translateY(0); opacity: 1}
-    50% {opacity: 0;}
-    100% {transform: translateY(50px); opacity: 0; }
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
 }
 
-
 @keyframes animatedOutCardOverlayOut {
-    0% {background: #000000; opacity: 0;}
-    100% {background: #000000; opacity: 1;}
+  0% {
+    background: #000000;
+    opacity: 0;
+  }
+  100% {
+    background: #000000;
+    opacity: 1;
+  }
+}
+
+@keyframes animatedOutCardTranslateInLogo {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes animatedOutCardTranslateOutLogo {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes animatedOutCardTranslateInTextOffset {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animatedOutCardTranslateOutTextOffset {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(200px);
+    opacity: 1;
+  }
 }

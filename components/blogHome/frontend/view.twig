@@ -1,0 +1,27 @@
+{% block BlogHomeComponent %}
+<div class="BlogHomeComponent">
+  <div class="container">
+    <div class="row">
+      {{ TitleComponent("Ultimas do", "Blog") }}
+      <div class="categorys">
+        <ul>
+          <li><a href="">Bares e Restaurantes</a></li>
+          <li><a href="">Passeios</a></li>
+          <li><a href="">Dicas</a></li>
+          <li><a href="">Arquitetura</a></li>
+          <li><a href="">História</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row flexbetween">
+      {{ CardBlogHomeComponent() }}
+      {{ CardBlogHomeComponent() }}
+      {{ CardBlogHomeComponent() }}
+    </div>
+
+    <div class="row">
+      <a href="" class="btnPrincipal">CONHEÇA O BLOG</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

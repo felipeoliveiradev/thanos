@@ -1,79 +1,99 @@
-.SlideComponent{
+.SlideComponent {
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  z-index: 0;
+  top: 0;
+  $ih: 100vh; // Slider height
+
+  .myslider {
+    height: 100%;
+    width: 100%;
+    margin: 0px auto;
     position: relative;
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
     z-index: 0;
+  }
+  .myslider .item {
+    height: 100vh;
+    width: 100%;
+    background: #eeeeee;
+    height: 100%;
+  }
+  .myslider .owl-stage {
+    height: 100%;
+  }
+  .myslider .owl-stage-outer {
+    height: 100%;
+  }
+  .myslider .item img {
+    height: 100vh;
+    width: 100%;
+  }
+  .owl-dots .owl-dot {
+    margin: 0px 0px;
+    z-index: 9;
+  }
+  .owl-dots .owl-dot button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #555555;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .owl-dots .owl-dot button:focus {
+    outline: none;
+  }
+  .owl-dots .owl-dot.active button {
+    color: #000000;
+  }
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: $colormask;
+    z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.74+0,0+25,0+100 */
+    background: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0.74) 0%,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 0) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0.74) 0%,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 0) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.74) 0%,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 0) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
     top: 0;
-    $ih: 100vh; // Slider height
-
-    .myslider {
-        height: 100%;
-        width: 100%;
-        margin: 0px auto;
-        position: relative;
-        z-index: 0;
-      }
-      .myslider .item {
-        height: 100vh;
-        width: 100%;
-        background: #eeeeee;
-        height: 100%;
-      }
-      .myslider .owl-stage{ height: 100%;}
-      .myslider .owl-stage-outer{ height: 100%;}
-      .myslider .item img {
-        height: 100vh;
-        width: 100%;
-      }
-      .owl-dots .owl-dot {
-        margin: 0px 0px;
-        z-index: 9;
-      }
-      .owl-dots .owl-dot button {
-        background: none;
-        border: none;
-        padding: 0;
-        color: #555555;
-        font-size: 14px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-      .owl-dots .owl-dot button:focus {
-        outline: none;
-      }
-      .owl-dots .owl-dot.active button {
-        color: #000000;
-      }
-      
-
-
-    .overlay{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background: $colormask;
-        z-index: 1;
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.74+0,0+25,0+100 */
-background: -moz-linear-gradient(top, rgba(0,0,0,0.74) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(0,0,0,0.74) 0%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(0,0,0,0.74) 0%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-        top: 0;
-        left: 0;
-    }
-    .barProgress{
-        position: relative;
-        width: 100%;
-        background: $masksubmask;
-        height: 213px;
-        border-top:3px solid #003614 ; 
-        margin-top:-283px;
-    }
-    .CommercialBarComponent{
-        position: relative;
-        z-index: 9;
-        margin-top:-70px;
-    }
+    left: 0;
+  }
+  .barProgress {
+    position: relative;
+    width: 100%;
+    background: $masksubmask;
+    height: 213px;
+    border-top: 3px solid #003614;
+    margin-top: -283px;
+  }
+  .CommercialBarComponent {
+    position: relative;
+    z-index: 9;
+    margin-top: -70px;
+  }
+  @media (max-width: $mediaWebMinimo) {
+    height: auto;
+  }
 }

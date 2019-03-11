@@ -1,11 +1,36 @@
-.h-100{
-    height: 100%;
+.h-100 {
+  height: 100%;
 }
-.resetPM{
-    padding: 0;
-    margin:0;
+.resetPM {
+  padding: 0;
+  margin: 0;
 }
-.flexbetween{
-    display: flex;
-    justify-content: space-between;
+.flexbetween {
+  display: flex;
+  justify-content: space-between;
+}
+.reset-0 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.m-0 {
+  margin: 0 !important;
+}
+.btnPrincipal {
+  width: 222px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  background: $colorprimary;
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  color: #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin: {
+    top: 2rem;
+    bottom: 3rem;
+  }
 }

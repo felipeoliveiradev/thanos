@@ -1,0 +1,20 @@
+.BarFooterComponent {
+  padding: {
+    top: 22px;
+    bottom: 17px;
+  }
+  background: #282828;
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+    li {
+      a {
+        color: #fff;
+        font-size: 33px;
+      }
+    }
+  }
+}

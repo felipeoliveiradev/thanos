@@ -1,0 +1,76 @@
+.CardBlogHomeComponent {
+  width: 32%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  margin-right: 0;
+  position: relative;
+  margin-bottom: 15px;
+  margin-top: 41px;
+  .CardMaster {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: #f2f2f2;
+    border-bottom: 3px solid #5f5d5e;
+    .imageContainer {
+      height: 300px;
+      background-size: cover !important;
+      background-position: center !important;
+    }
+    .text {
+      .brands {
+        padding: {
+          top: 25px;
+          left: 33px;
+          right: 33px;
+        }
+        margin-top: -34px;
+        .date {
+          padding: {
+            top: 7px;
+            left: 20px;
+            right: 14px;
+
+            bottom: 8px;
+          }
+          border-radius: 5px 0 0 5px;
+          color: #fff;
+          background: $colorprimary !important;
+        }
+        .category {
+          padding: {
+            top: 7px;
+            left: 20px;
+            right: 14px;
+
+            bottom: 8px;
+          }
+          border-radius: 0px 5px 5px 0;
+
+          color: #fff;
+          background: $colorsecound !important;
+        }
+      }
+      h1 {
+        font-size: 18px;
+        padding: {
+          top: 25px;
+          left: 33px;
+          right: 33px;
+        }
+      }
+      p {
+        padding: {
+          left: 33px;
+          right: 33px;
+
+          bottom: 22px;
+        }
+      }
+    }
+  }
+  @media (max-width: $mediaWebMinimo) {
+    width: 100%;
+  }
+}

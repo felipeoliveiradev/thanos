@@ -1,13 +1,18 @@
-@import 'variaveis.scss';
-@import 'extras.scss';
-@import 'components/import.scss';
-@import 'fontes/import.scss';
-@import 'animacao.scss';
+@import "variaveis.scss";
+@import "extras.scss";
+@import "animacao.scss";
+@import "config.scss";
 
-body, html {
-    margin: 0 auto;
-    font-family: 'Myriad Pro Regular' !important;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
+// IMPORTAÇÃO PASTAS
+@import "components/import.scss";
+@import "fontes/import.scss";
+@import "extras/import.scss";
+
+body,
+html {
+  margin: 0 auto;
+  font-family: "Myriad Pro Regular" !important;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
 }
