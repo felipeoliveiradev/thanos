@@ -1,16 +1,6 @@
 {% extends "base.twig" %}
-{% set arrayAbout = {
-   title : '44 anos',
-   subtitle : 'de história',
-   text : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer urna mauris, consectetur sed tempor ac, faucibus bibendum massa. Duis in justo porta, commodo dolor ac, euismod urna. Quisque vitae pulvinar quam, eget aliquam metus. ',
-   image : 'https://cdn.wonderfulengineering.com/wp-content/uploads/2016/01/Desktop-Wallpaper-4.jpg',
-   link : '#' 
-}%}
+
 {% block content %}
-  {{MenuComponent()}}
-  {{SlideComponent()}}
-  {{PropertiesSellComponent('Imóveis', 'a venda')}}
-  {{AboutComponent(arrayAbout)}}
-  {{BlogHomeComponent(arrayAbout)}}
+  aqui entra o corpo da home
 {% endblock %}
 

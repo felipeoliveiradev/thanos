@@ -1,4 +1,0 @@
-<?php
-    $context=$array
-
-?>
